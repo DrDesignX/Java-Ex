@@ -304,30 +304,25 @@ class Main {
     }
 
     // 8th question ****************************************
-    public static int LCM(int Fnum, int Snum) {
+    public static int LCD(int n1, int n2) {
         int lcm;
-        lcm = (Fnum > Snum) ? Fnum : Snum;
+        lcm = (n1 > n2) ? n1 : n2;
         while (true) {
-            if ((lcm % Fnum == 0) && (lcm % Snum == 0)) {
-                System.out.printf("The LCM of %d and %d is %d.", Fnum, Snum, lcm);
-                return lcm;
-                // break;
+            if (lcm % n1 == 0 && lcm % n2 == 0) {
+                // System.out.printf("The LCM of %d and %d is %d.", n1, n2, lcm);
+                break;
             }
             ++lcm;
         }
+
+        return lcm;
     }
 
-    public static void numGenANDcheck(int num) {
-        int[] arr = new int[num];
-        for (int i = 1; i < num; i++) {
-            arr[i] = i;
-        }
-        for (int i = 0; i < arr.length; i++) {
-            for (int k = i + 1; k < arr.length; k++) {
-                if (arr[i] < arr[k]) {
-                    if (arr[i] * arr[k] == LCM(arr[i], arr[k]))
-                        System.out.print("(" + arr[i] + "," + arr[k] + ") | ");
-                } else {
+    public static void printNumbers(int n) {
+        for (int i = 1; i < n; i++) {
+            for (int j = i + 1; j < n; j++) {
+                if (LCD(i, j) != (i * j) && j > i) {
+                    System.out.println("(" + i + " " + j + ")");
                 }
             }
         }
@@ -358,6 +353,9 @@ class Main {
             System.out.println(newArr[i]);
         }
     }
+
+    //11th question
+
 
     public static void main(String[] args) {
 
