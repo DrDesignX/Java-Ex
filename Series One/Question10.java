@@ -1,8 +1,8 @@
 class Question10 {
     public static String baseConverter(String num, int fromBase, int toBase) {
+
         return Integer.toString(Integer.parseInt(num, fromBase), toBase);
     }
-
     public static int sumofDigits(int num) {
         int digit, sum = 0;
         while (num > 0) {
@@ -12,7 +12,9 @@ class Question10 {
         }
         return sum;
     }
+
     public static void main(String[] args) {
-        System.out.println(baseConverter("766", 10, 9));
+        // ! baseConverter (num, fromBase, toBase)
+        System.out.println(baseConverter("101", 10, 12));
     }
 }

@@ -21,8 +21,9 @@ class Question4 {
         System.out.println("highest grade : " + highestGeade);
         System.out.println("lowest grade : " + lowestGrade);
     }
+
     public static void main(String[] args) {
-        int grades[] = { 19, 20, 14, 15, 20 , 6 };
+        int grades[] = { 19, 20, 14, 15, 20, 6 };
         getGrades(grades);
     }
 }

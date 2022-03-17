@@ -354,41 +354,80 @@ class Main {
         }
     }
 
-    //11th question
+    // 11th question
+    static int findSplitPoint(int arr[], int n) {
+        int leftSum = 0;
+        for (int i = 0; i < n; i++) {
+            leftSum += arr[i];
+            int rightSum = 0;
+            for (int j = i + 1; j < n; j++)
+                rightSum += arr[j];
+            if (leftSum == rightSum)
+                return i + 1;
+        }
+        return -1;
+    }
 
+    static void printTwoParts(int arr[], int n) {
+        int splitPoint = findSplitPoint(arr, n);
+        if (splitPoint == -1 || splitPoint == n) {
+            System.out.println("Not Possible");
+            return;
+        }
+        for (int i = 0; i < n; i++) {
+            if (splitPoint == i) {
+                    System.out.println();
+                }
+            System.out.print(arr[i] + " ");
+
+        }
+    }
 
     public static void main(String[] args) {
 
-        // 1st question example ********************
+        // * 1st question example *******************
         // int a[] = { 3, 0, 0, 7 };
         // int b[] = { 0, 0 , 1 , 0};
         // addPolymonial(a, b);
 
-        // 2nd question example ********************
+        // * 2nd question example *******************
         // printShapes(9);
 
-        // 3rd question example ********************
+        // * 3rd question example *******************
         // printDiamonds(7);
 
-        // 4th question example ********************
+        // * 4th question example *******************
         // int grades[] = { 19, 20, 14, 15, 20 , 6 };
         // getGrades(grades);
 
-        // 5th & 10th question example ********************
+        // * 5th & 10th question example ************
         // baseConverter("766", 10, 9);
         // sumOfConvert("766", 10, 9);
 
-        // 6th qestion example ********************
+        // * 6th qestion example ********************
         // int arr[] = { 1, 2, 3, 4, 2, 3, 2, 5 };
         // moveArr(arr, 3);
 
-        // 7th qestion example ********************
+        // * 7th qestion example ********************
         // int arr[] = { 2, 3, 7, 12, -4 , -2 };
         // findNumbers(arr);
 
-        // 9th qestion example ********************
+        // * 8th qestion example ********************
+        // int arr[] = { 2, 3, 7, 12, -4 , -2 };
+        // findNumbers(arr);
+
+        // * 9th qestion example ********************
         // int arr[] = { 2, 4, 1, 3, 5 };
         // XOR(arr, 5);
+
+        // * 10th qestion example *******************
+        // ! baseConverter (num, fromBase, toBase)
+        // System.out.println(baseConverter("101", 10, 12));
+
+        // * 11th qestion example *******************
+        // int arr[] = { 1, 1, 6, 4, 3, 3 };
+        // int n = arr.length;
+        // printTwoParts(arr, n);
 
     }
 }

@@ -78,6 +78,7 @@ class Question2 {
         }
         System.out.println(" ");
     }
+
     public static void main(String[] args) {
         printShapes(9);
     }

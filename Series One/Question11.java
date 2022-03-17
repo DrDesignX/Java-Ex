@@ -30,8 +30,7 @@ class Question11 {
     }
 
     public static void main(String[] args) {
-
-        int arr[] = { 1, 1, 6, 4, 3, 3 };
+        int arr[] = { 1, 1, 8, 4, 3, 3 };
         int n = arr.length;
         printTwoParts(arr, n);
 

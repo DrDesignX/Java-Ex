@@ -1,3 +1,4 @@
+// URL = https://github.com/DrDesignX/Java-Ex
 class Question1 {
     public static String printDegree(int a, int degree) {
         String theDegree = "";
@@ -26,7 +27,7 @@ class Question1 {
                     int deg = 3 - i;
                     int sum = a[i] + b[i];
                     if (i != aSize - 1 && sum != 0) {
-                        finalOutput += printDegree(sum, deg) + "  +  ";
+                        finalOutput += printDegree(sum, deg) + " + ";
                     }
                     if (i == aSize - 1) {
                         finalOutput += printDegree(sum, deg);
@@ -43,7 +44,7 @@ class Question1 {
                     int deg = 3 - i;
                     int sum = a[i] + b[i];
                     if (sum != 0) {
-                        finalOutput += printDegree(sum, deg) + "  +  ";
+                        finalOutput += printDegree(sum, deg) + " + ";
                     }
                 }
 
@@ -53,7 +54,7 @@ class Question1 {
                     int deg = 3 - i;
                     int summation = biggerArr[i];
                     if (i != bigger - 1 && summation != 0) {
-                        finalOutput += printDegree(summation, deg) + "  +  ";
+                        finalOutput += printDegree(summation, deg) + " + ";
                     }
                     if (i == bigger - 1 && summation != 0) {
                         finalOutput += printDegree(summation, deg);
@@ -66,8 +67,8 @@ class Question1 {
 
     }
     public static void main(String[] args) {
-        int a[] = { 3, 0, 0, 7 };
-        int b[] = { 0, 0 , 1 , 0};
+        int a[] = { 1, -1, 5, 7 };
+        int b[] = { 0, 3 , 6 , -2};
         addPolymonial(a, b);
     }
 }
