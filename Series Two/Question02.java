@@ -10,11 +10,11 @@ class Question02 {
         String first = inp.nextLine();
         System.out.println("Please enter First String :");
         String second = inp.nextLine();
+        System.out.println(stringComparison(first, second));
         // System.out.println(stringsEqual(first, second));
         // System.out.println(containsNumber(second));
         // System.out.println(lengthGreaterThanEight(first));
         // System.out.println(containsSpecialChar(first));
-        System.out.println(stringComparison(first, second));
     }
 
     public static boolean stringsEqual(String first, String second) {
@@ -23,7 +23,7 @@ class Question02 {
 
     public static boolean containsNumber(String string) {
         int digitCount = 0;
-        char[] stringChars = stringToChar(string);
+        char[] stringChars = string.toCharArray();
         for (char ch : stringChars) {
             if (Character.isDigit(ch)) {
                 digitCount++;
@@ -58,14 +58,6 @@ class Question02 {
 
     public static boolean stringComparison(String first, String second) {
         return stringsEqual(first, second) &&  containsNumber(first) && lengthGreaterThanEight(first) && containsSpecialChar(first);
-    }
-
-    public static char[] stringToChar(String str) {
-        char[] ch = new char[str.length()];
-        for (int i = 0; i < str.length(); i++) {
-            ch[i] = str.charAt(i);
-        }
-        return ch;
     }
 
 }
