@@ -13,16 +13,8 @@ class Question01 {
         System.out.println(isValid(email));
     }
 
-    public static char[] StringToChar(String str) {
-        char[] ch = new char[str.length()];
-        for (int i = 0; i < str.length(); i++) {
-            ch[i] = str.charAt(i);
-        }
-        return ch;
-    }
-
     public static boolean isValid(String email) {
-        char[] emailChars =  StringToChar(email);
+        char[] emailChars =  email.toCharArray();
         if (emailChars[0] == '_') {
             return false;
         }
