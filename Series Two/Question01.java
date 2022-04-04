@@ -1,9 +1,11 @@
 import java.util.Scanner;
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 class Question01 {
-    // email = "emailtest@gmail.ir";
+    /* 
+        Github  : https://github.com/DrDesignX/Java-Ex
+        Authors : MohamadAmin Seydi & MohamadReza Barkhordari 
+    */
     public static void main(String[] args) {
         Scanner inp = new Scanner(System.in);
         System.out.println("Please enter your email: ");
