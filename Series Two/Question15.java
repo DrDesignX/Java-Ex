@@ -13,7 +13,6 @@ class Question15 {
         }
         for (int s : addArray(arr)) {
             System.out.println(s);
-
         }
     }
 
@@ -30,5 +29,4 @@ class Question15 {
         }
         return addArray(newarr);
     }
-
 }
