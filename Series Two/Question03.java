@@ -12,7 +12,7 @@ class Question03 {
     }
 
     public static void removeDuplications(String string) {
-        char[] array = stringToChar(string);
+        char[] array = string.toCharArray();
 
         String str = "";
         for (int i = 0; i < array.length; i++) {
@@ -21,13 +21,4 @@ class Question03 {
         }
         System.out.println(str);
     }
-
-    public static char[] stringToChar(String str) {
-        char[] ch = new char[str.length()];
-        for (int i = 0; i < str.length(); i++) {
-            ch[i] = str.charAt(i);
-        }
-        return ch;
-    }
-
 }
