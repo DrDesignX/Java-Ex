@@ -34,7 +34,7 @@ class Question04 {
         char[] newarr = new char[str.length()];
         int j = 0;
         for (int i = 0; i < array.length; i++) {
-            if (Character.isDigit(array[i])) {
+            if (array[i] == '0' || array[i] == '1') {
                 newarr[j++] = array[i];
             } else {
                 newarr[j++] = '-';
@@ -48,21 +48,28 @@ class Question04 {
         String[] splited = stringChar.split("-");
         for (String s : splited) {
             if (s != "") {
+
                 // System.out.println(baseConverter(s, 2, 10));
                 count++;
+
                 // nums[a++] = Integer.parseInt(baseConverter(s, 2, 10));
             }
 
         }
-        int[] nums = new int[count];
-        int a = 0;
-        for (String s : splited) {
-            if (s != "") {
-                // System.out.println(baseConverter(s, 2, 10));
-                nums[a++] = Integer.parseInt(baseConverter(s, 2, 10));
-            }
+        if(count==0)
+        {
+            System.out.println("not found");
         }
-        int result = getMax(nums);
-        System.out.println(result);
+        else
+        {
+            int[] nums = new int[count];
+            int a = 0;
+            for (String s : splited) {
+                if (s != "") {
+                    nums[a++] = Integer.parseInt(baseConverter(s, 2, 10));
+                }
+            }
+            System.out.println(getMax(nums));
+        }
     }
 }
